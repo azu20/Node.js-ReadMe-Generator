@@ -1,40 +1,43 @@
 
-# s
+# Generate a good readme.md
 
 ## Description
-sdf
+sds
 
-## Table of Contents (Optional)
-If your README is very long, add a table of contents to make it easy for users to find what they need.
 
-Installation
-Usage
-Credits
-License
+
+## Table of Contents
+
+  * [Installation]( ##installation ) 
+  * [Usage]( ##usage ) 
+  * [License]( ##license )
+  * [Badges]( ##badges )
+  * [Contributing]( ##contributing )
+  * [Tests]( ##tests )
+  * [Contact]( ##contact )
+
 
 
 ## Installation
-sdf
+sdfsd
 
 ## Usage
-sdf
+sdfsd
 
 ## License
-[BSD 3-Clause "New" or "Revised" license](  http://www.google.com )   
+[BSD 3-Clause "New" or "Revised" license](  https://opensource.org/licenses/BSD-3-Clause )   
 
 ## Badges
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/sdf/s?sort=semver&style=for-the-badge)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/azu20/Generate a good readme.md?sort=semver&style=for-the-badge)
 
 ## Contributing
-sdf      
+fsdfs      
 
 ## Tests
-sdf 
+fsdfs 
 
 ## Contact
 sdf
 
 * Email not listed
-* ![Avatar](https://avatars0.githubusercontent.com/u/81281?v=4 "Github Avatar")  
-
-      
+* ![Avatar](https://avatars2.githubusercontent.com/u/60865924?v=4 "Github Avatar")  

@@ -5,9 +5,17 @@ const axios = require("axios");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
-
-const licences = {
-  'BSD 3-Clause "New" or "Revised" license': "http://www.google.com"
+const licenses = {
+  'Apache License 2.0': "https://opensource.org/licenses/Apache-2.0",
+  'BSD 3-Clause "New" or "Revised" license': "https://opensource.org/licenses/BSD-3-Clause",
+  'BSD 2-Clause "Simplified" or "FreeBSD" license': "https://opensource.org/licenses/BSD-2-Clause",
+  'GNU General Public License (GPL)': "https://opensource.org/licenses/gpl-license",
+  'GNU Library or "Lesser" General Public License (LGPL)': "https://opensource.org/licenses/lgpl-license",
+  'MIT license': "https://opensource.org/licenses/MIT",
+  'Mozilla Public License 2.0': "https://opensource.org/licenses/MPL-2.0",
+  'Common Development and Distribution License': "https://opensource.org/licenses/CDDL-1.0",
+  'Eclipse Public License version 2.0': "https://opensource.org/licenses/EPL-2.0",
+  'none': "No license used"
 };
 
 async function promptUser() {
@@ -33,7 +41,6 @@ async function promptUser() {
         name: "installation",
         message: "What needs to be installed to successfully run your program?"
       },
-      //confirm what they mean by usage. 
       {
         type: "input",
         name: "usage",
@@ -52,7 +59,7 @@ async function promptUser() {
           `Mozilla Public License 2.0`,
           `Common Development and Distribution License`,
           `Eclipse Public License version 2.0`,
-          `none`]
+          `None`]
       },
       {
         type: "input",
@@ -75,8 +82,7 @@ async function promptUser() {
   }
 }
 
-
-
+//put both objects into one object 
 promptUser()
   .then(async (responses) => {
 
@@ -103,8 +109,6 @@ promptUser()
 
   });
 
-
-
 async function readMe(answers) {
 
   const file = `
@@ -113,13 +117,18 @@ async function readMe(answers) {
 ## Description
 ${answers.description}
 
-## Table of Contents (Optional)
-If your README is very long, add a table of contents to make it easy for users to find what they need.
 
-Installation
-Usage
-Credits
-License
+
+## Table of Contents
+
+  * [Installation]( ##installation ) 
+  * [Usage]( ##usage ) 
+  * [License]( ##license )
+  * [Badges]( ##badges )
+  * [Contributing]( ##contributing )
+  * [Tests]( ##tests )
+  * [Contact]( ##contact )
+
 
 
 ## Installation
@@ -129,7 +138,7 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
-[${answers.license}](  ${licences[answers.license]} )   
+[${answers.license}](  ${licenses[answers.license]} )   
 
 ## Badges
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/${answers.userName}/${answers.title}?sort=semver&style=for-the-badge)
@@ -145,8 +154,7 @@ ${answers.questions}
 
 * ${answers.email || "Email not listed"}
 * ![Avatar](${answers.avatar} "Github Avatar")  
-
-      `
+`
   return file;
 };
 
