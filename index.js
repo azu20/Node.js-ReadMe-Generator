@@ -75,11 +75,49 @@ async function promptUser() {
   }
 }
 
- promptUser()
-.then(function(response) {
-  console.log(response);
+//  promptUser()
+// .then(function(response) {
+//   console.log(response);
   
-});
+// });
+
+// axios 
+//   .get("https://api.github.com/users/alfredherr", config)
+//   .then(res) => {
+//     console.log(res.data); 
+
+//     const { img } =  res.data; 
+
+//     appendFileAsynch("Readme.txt", img + "\n")
+//       .then () => (console.log("success!"))
+    
+//       readFileAsyng("Readme.txt", "utf-8")
+//       .then(data) => {
+//         console.log("below"); 
+//         console.log(data); 
+//       }
+//   }
+
+
+//write a promise call 
+async function getGitProfile(userName) {
+  try {
+    const { data } = await axios.get(
+      `https://api.github.com/users/${userName}`
+    );
+    // console.log(data.avatar_url);
+    // console.log(data.email);
+    return {
+      avatar: data.avatar_url, 
+      email: data.email,
+    }
+  } catch (err) {
+    console.log(err); 
+  }
+}; 
+//print values in an object 
+getGitProfile("azu20").then((profile) => console.log(profile)); 
+
 
 
 
