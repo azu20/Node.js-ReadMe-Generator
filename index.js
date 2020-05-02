@@ -3,22 +3,12 @@ const fs = require("fs");
 const util = require("util");
 const axios = require("axios");
 
-//ask for github user name and pull github repo
-// async function getGitURL() {
-//   try {
-//     const { userName } = await inquirer.prompt({
-//       message: "What's your GitHub username?",
-//       name: "userName"
-//     });
+const writeFileAsync = util.promisify(fs.writeFile);
 
-//     const { data } = await axios.getGitURL(
-//       `https://api.github.com/users/${userName}`
-//     )
-//   }
-// }
 
-///get user information, prompt user to answer and put together the readmeFile
-// const writeFileAsync = util.promisify(fs.writeFile);
+const licences = {
+  'BSD 3-Clause "New" or "Revised" license': "http://www.google.com"
+};
 
 async function promptUser() {
   try {
@@ -50,19 +40,29 @@ async function promptUser() {
         message: "How will your program be used?"
       },
       {
-        type: "input",
-        name: "licenses",
-        message: "What licenses will your program have?"
+        type: 'list',
+        name: 'license',
+        message: 'What license do you want to use?',
+        choices: [`Apache License 2.0`,
+          `BSD 3-Clause "New" or "Revised" license`,
+          `BSD 2-Clause "Simplified" or "FreeBSD" license`,
+          `GNU General Public License (GPL)`,
+          `GNU Library or "Lesser" General Public License (LGPL)`,
+          `MIT license`,
+          `Mozilla Public License 2.0`,
+          `Common Development and Distribution License`,
+          `Eclipse Public License version 2.0`,
+          `none`]
       },
       {
         type: "input",
-        name: "Contributing",
-        message: "What does the user need to know about contributing to your repository?"
+        name: "contributing",
+        message: "What are the steps that people should take to contribute to your project?"
       },
       {
         type: "input",
         name: "tests",
-        message: "How can the user test your application?"
+        message: "Are there any specific steps to run tests?"
       },
       {
         type: "input",
@@ -75,31 +75,82 @@ async function promptUser() {
   }
 }
 
-//  promptUser()
-// .then(function(response) {
-//   console.log(response);
-  
-// });
-
-// axios 
-//   .get("https://api.github.com/users/alfredherr", config)
-//   .then(res) => {
-//     console.log(res.data); 
-
-//     const { img } =  res.data; 
-
-//     appendFileAsynch("Readme.txt", img + "\n")
-//       .then () => (console.log("success!"))
-    
-//       readFileAsyng("Readme.txt", "utf-8")
-//       .then(data) => {
-//         console.log("below"); 
-//         console.log(data); 
-//       }
-//   }
 
 
-//write a promise call 
+promptUser()
+  .then(async (responses) => {
+
+    const responsesFromgitHub = await getGitProfile(responses.userName);//.then((profile) => console.log(profile));
+
+    return allValuesNeeded = {
+      ...responsesFromgitHub,
+      ...responses
+    };
+
+  })
+  .then(async (allValues) => {
+    const textForFile = await readMe(allValues);
+
+    console.log(textForFile);
+
+    return textForFile;
+  })
+  .then((text) => {
+
+    writeFileAsync("./result/ReadMe.md", text).then(() => {
+      console.log("Your README file has been created.");
+    });
+
+  });
+
+
+
+async function readMe(answers) {
+
+  const file = `
+# ${answers.title}
+
+## Description
+${answers.description}
+
+## Table of Contents (Optional)
+If your README is very long, add a table of contents to make it easy for users to find what they need.
+
+Installation
+Usage
+Credits
+License
+
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+[${answers.license}](  ${licences[answers.license]} )   
+
+## Badges
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/${answers.userName}/${answers.title}?sort=semver&style=for-the-badge)
+
+## Contributing
+${answers.contributing}      
+
+## Tests
+${answers.contributing} 
+
+## Contact
+${answers.questions}
+
+* ${answers.email || "Email not listed"}
+* ![Avatar](${answers.avatar} "Github Avatar")  
+
+      `
+  return file;
+};
+
+
 async function getGitProfile(userName) {
   try {
     const { data } = await axios.get(
@@ -108,31 +159,11 @@ async function getGitProfile(userName) {
     // console.log(data.avatar_url);
     // console.log(data.email);
     return {
-      avatar: data.avatar_url, 
+      avatar: data.avatar_url,
       email: data.email,
     }
   } catch (err) {
-    console.log(err); 
+    console.log(err);
   }
-}; 
-//print values in an object 
-getGitProfile("azu20").then((profile) => console.log(profile)); 
-
-
-
-
-
-  //generate a basic txt file
-
-
-// writeFileAsync("test.txt", "utf8")
-//   .then((data) => {
-//     console.log(data);
-// })
-//   .catch((err) => {
-//       console.log(err);
-//   })  
-
-///create layout of readme file, insert user input 
-//generate a badge. 
+};
 
