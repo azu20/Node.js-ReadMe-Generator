@@ -114,7 +114,7 @@ async function readMe(answers) {
   const file = `
 # ${answers.title}
 
-* ![Video](https://j.gifs.com/71BLjy.gif "How to video")
+* ![Video](https://j.gifs.com/Jy9yD2.gif "How to video")
 
 ## Description
 ${answers.description}
