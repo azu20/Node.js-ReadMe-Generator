@@ -146,7 +146,7 @@ ${answers.usage}
 ${answers.contributing}      
 
 ## Tests
-${answers.contributing} 
+${answers.tests} 
 
 ## Contact
 ${answers.questions}

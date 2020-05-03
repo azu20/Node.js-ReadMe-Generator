@@ -1,10 +1,11 @@
 
-# Readme-project
+# ReadMe-Generator-Node.JS
 
-* ![Video](https://j.gifs.com/71BLjy.gif "How to video")
+* ![Video](https://j.gifs.com/Jy9yD2.gif "How to video")
 
 ## Description
-This command-line application generates a ReadMe.md from the user input. The ReadMe will have information about the user project including: what the app is for, how to use the app, how to install it, how to report issue, and how to make contributions so that other developers are more likely to use and contribute to the success of the project.
+This command-line application gnerates a quality Readme.md file using user input. The Readme wll have information about your project, purpose, what to install, how to run it, and how to contribute and contact the project owner.  
+
 
 ## Table of Contents
 
@@ -17,25 +18,25 @@ This command-line application generates a ReadMe.md from the user input. The Rea
   * [Contact]( ##contact )
 
 ## Installation
-To run this app, you must have a Github account. Run the this app you will need to install axios and npm libraries.
+To run this app you have to install npm and axios libraries. 
 
 ## Usage
-on the command line run the 'node index.js' command. After you press enter, you will be prompted wth a series of questions. Answer each question. Once you've answered the last question, the Readme page will print on the command line, the last line will confirm your Readme page has been created. 
+On the console, run the 'node index.js' command. After you press enter, you will be prompted with a series of questions. Once all the questions are answered the Readme page will print on your console. You will get a confirmation that your Readme page has been created. Check your folder and you will see the new file, congratulations you have just created a Readme page! 
 
 ## License
-[GNU General Public License (GPL)](  https://opensource.org/licenses/gpl-license )   
+[Mozilla Public License 2.0](  https://opensource.org/licenses/MPL-2.0 )   
 
 ## Badges
-![GitHub release (latest SemVer)]( https://img.shields.io/github/v/release/azu20/Readme-project?sort=semver&style=for-the-badge )
+![GitHub release (latest SemVer)]( https://img.shields.io/github/v/release/azu20/ReadMe-Generator-Node.JS?sort=semver&style=for-the-badge )
 
 ## Contributing
-If you are interested in contributin to my contract please contact me a via email or through my GitHub account. 
+If you are interested in contributing to my project, or if you would like to report an issue, please contact me, please visit the Contact section of this page.       
 
 ## Tests
-No tests have been written at the moment.  
+No Unit tests have been written at this time. 
 
 ## Contact
-Please contact me at my email below!
+ Please contact me via email listed on my Github account or via my profile page: https://azu20.github.io/Suzy-Profile/ 
 
 * Email not listed
 * ![Avatar](https://avatars2.githubusercontent.com/u/60865924?v=4 "Github Avatar") 
