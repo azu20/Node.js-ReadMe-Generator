@@ -29,7 +29,7 @@ async function promptUser() {
       {
         type: "input",
         name: "title",
-        message: "Project name:"
+        message: "Project name(no spaces):"
       },
       {
         type: "input",
@@ -114,10 +114,11 @@ async function readMe(answers) {
   const file = `
 # ${answers.title}
 
-
+* ![Video](https://j.gifs.com/71BLjy.gif "How to video")
 
 ## Description
 ${answers.description}
+
 
 ## Table of Contents
 
@@ -129,8 +130,6 @@ ${answers.description}
   * [Tests]( ##tests )
   * [Contact]( ##contact )
 
-
-
 ## Installation
 ${answers.installation}
 
@@ -141,7 +140,7 @@ ${answers.usage}
 [${answers.license}](  ${licenses[answers.license]} )   
 
 ## Badges
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/${answers.userName}/${answers.title}?sort=semver&style=for-the-badge)
+![GitHub release (latest SemVer)]( https://img.shields.io/github/v/release/${answers.userName}/${answers.title}?sort=semver&style=for-the-badge )
 
 ## Contributing
 ${answers.contributing}      
