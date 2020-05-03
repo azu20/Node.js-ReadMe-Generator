@@ -23,8 +23,8 @@ async function promptUser() {
     return await inquirer.prompt([
       {
         type: "input",
-        message: "What's your GitHub username?",
-        name: "userName"
+        name: "userName",
+        message: "What's your GitHub username?"
       },
       {
         type: "input",
@@ -103,7 +103,7 @@ promptUser()
   })
   .then((text) => {
 
-    writeFileAsync("./result/ReadMe.md", text).then(() => {
+    writeFileAsync("README.md", text).then(() => {
       console.log("Your README file has been created.");
     });
 
@@ -114,16 +114,16 @@ async function readMe(answers) {
   const file = `
 # ${answers.title}
 
+
+
 ## Description
 ${answers.description}
-
-
 
 ## Table of Contents
 
   * [Installation]( ##installation ) 
   * [Usage]( ##usage ) 
-  * [License]( ##license )
+  * [License]( #license )
   * [Badges]( ##badges )
   * [Contributing]( ##contributing )
   * [Tests]( ##tests )
@@ -153,7 +153,7 @@ ${answers.contributing}
 ${answers.questions}
 
 * ${answers.email || "Email not listed"}
-* ![Avatar](${answers.avatar} "Github Avatar")  
+* ![Avatar](${answers.avatar} "Github Avatar") 
 `
   return file;
 };
