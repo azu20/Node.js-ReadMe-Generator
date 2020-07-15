@@ -38,4 +38,5 @@ No Unit tests have been written at this time.
  Please contact me via email listed on my Github account or via my profile page: https://azu20.github.io/Suzy-Profile/ 
 
 * Email not listed
+
 ![Avatar](https://avatars2.githubusercontent.com/u/60865924?v=4 "Github Avatar") 
