@@ -137,6 +137,7 @@ ${answers.installation}
 ${answers.usage}
 
 ## License
+[![Coverage Status](https://coveralls.io/repos/github/sdanyalk/template-engine-employee-summary/badge.svg?branch=master)](https://coveralls.io/github/sdanyalk/template-engine-employee-summary?branch=master)
 [${answers.license}](  ${licenses[answers.license]} )   
 
 ## Badges
