@@ -3,7 +3,7 @@
 * ![Video](https://j.gifs.com/Jy9yD2.gif "How to video")
 
 ## Description
-This command-line application gnerates a quality Readme.md file using user input. The Readme wll have information about your project, purpose, what to install, how to run it, and how to contribute and contact the project owner.  
+This command-line application generates a quality Readme.md file using user input. The Readme will have information about your project, purpose, what to install, how to run it, and how to contribute and contact the project owner.  
 
 
 ## Table of Contents
