@@ -23,12 +23,13 @@ To run this app you have to install npm and axios libraries.
 On the console, run the 'node index.js' command. After you press enter, you will be prompted with a series of questions. Once all the questions are answered the Readme page will print on your console. You will get a confirmation that your Readme page has been created. Check your folder and you will see the new file, congratulations you have just created a Readme page! 
 
 ## License
-[Mozilla Public License 2.0](  https://opensource.org/licenses/MPL-2.0 )   
-
-## Badges
 * ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
+## Badges
+
 * <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+
+* <img src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
 
 
 ## Contributing
