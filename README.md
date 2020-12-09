@@ -1,10 +1,9 @@
 # ReadMe-Generator-Node.JS
 
-* ![Video](https://j.gifs.com/Jy9yD2.gif "How to video")
-
 ## Description
 This command-line application generates a quality Readme.md file using user input. The Readme will have information about your project, purpose, what to install, how to run it, and how to contribute and contact the project owner.  
 
+* ![Video](https://j.gifs.com/Jy9yD2.gif "How to video")
 
 ## Table of Contents
 
