@@ -26,7 +26,10 @@ On the console, run the 'node index.js' command. After you press enter, you will
 [Mozilla Public License 2.0](  https://opensource.org/licenses/MPL-2.0 )   
 
 ## Badges
-![GitHub release (latest SemVer)]( https://img.shields.io/github/v/release/azu20/ReadMe-Generator-Node.JS?sort=semver&style=for-the-badge )
+* ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+* <img src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
+
 
 ## Contributing
 If you are interested in contributing to my project, or if you would like to report an issue, please contact me, please visit the Contact section of this page.       
